@@ -1,0 +1,21 @@
+import tkinter
+from tkinter import *
+
+root=Tk()
+root.title("ToDo")
+root.geometry("398x645+900+100")
+
+task_list = []
+
+Image=PhotoImage(file='Screenshot 2024-06-22 201106.png')
+Label(root,image=Image).pack()
+tiTle=Label(root, text="To-Do",font="comicsans",bg="#32405b")
+tiTle.place(x=150,y=200)
+
+thIngs=Text(root, width=25, height=50)
+thIngs.pack(pady= 30)
+
+
+
+
+root.mainloop()
