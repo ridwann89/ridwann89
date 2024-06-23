@@ -1,0 +1,11 @@
+import random
+
+print("WELCOME")
+print("--------")
+def passgen(line):
+    thin1 = string.ascii_letters + string.digits + string.punctuation
+    passWord = ''.join(random.choice(thin1) for i in range(line))
+    return passWord
+
+line = int(input("Length of your Password: "))
+print(f"It's done !, here is your password: {passgen(line)}")
