@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    
+}
+
+button{
+    background-color: aqua;
+}
+.img-monkey1{
+    position: relative;
+    left: 1600px;
+    top: 170px;
+    width: 300px;
+}
+.img-monkey2{
+    position: relative;
+    top: 170px;
+    right: 300px;
+    width: 300px;
+}
