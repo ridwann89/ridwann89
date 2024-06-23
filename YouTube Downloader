@@ -1,0 +1,39 @@
+from pytube import YouTube, Playlist
+from pytube import Search
+from pytube.exceptions import VideoUnavailable
+
+link = YouTube('https://www.youtube.com/watch?v=e-6eWEhjMa4')
+playList = Playlist(link)
+
+#Title
+
+print(link.title)
+
+#Views
+
+print(link.views)
+
+#Download all of the Videos of the Channel
+
+downLoad = { video in c.videos:
+                video.streams.first().download()}
+
+#Troubleshooting(When a video is unavailable)
+for url in playList.video_urls:
+     try:
+         yt = YouTube(url)
+     except VideoUnavailable:
+         print(f'Video {url} is unavaialable, skipping.')
+     else:
+         print(f'Downloading video: {url}')
+         downLoad
+        
+
+#If you want to download a live 
+live = link.streams.get_by_itag(22)
+live.download()
+
+#YT Search
+
+surge = Search('Hack Club')
+print(surge)
